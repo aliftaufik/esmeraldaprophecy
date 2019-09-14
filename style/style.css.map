@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,2EAAI;ADEZ,AAAA,CAAC,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACtB;;AAED,AAAA,IAAI,CAAC;EACJ,SAAS,EAAE,IAAI;EACf,WAAW,ECRA,SAAS,EAAE,UAAU;EDShC,UAAU,EAAE,MAAM;CAClB",
+    "sources": [
+        "style.scss",
+        "_fonts.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
