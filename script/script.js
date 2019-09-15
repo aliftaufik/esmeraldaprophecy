@@ -81,10 +81,11 @@ var questions = [
 
 let usedQuestions = []
 let answers = {}
-const initialState = document.body.innerHTML
 
 function main() {
 	document.getElementById('start-area').style.display = 'none'
+	document.getElementById('title-area').innerHTML =
+		"<h1>Esmeralda's Prophecy</h1>"
 	showQuestion(usedQuestions)
 }
 
@@ -138,7 +139,7 @@ function checkNextQuestion() {
 function showResult() {
 	let result = document.getElementById('result')
 	result.innerHTML = `You are a person who like to ${
-		answers[2]
+		questions[2].ans[answers[2]]
 	}	someone. You often ${
 		questions[3].ans[answers[3]]
 	} but you always like to take the challenge. You are a person who ${
@@ -155,7 +156,7 @@ function showResult() {
 }
 
 function restart() {
-	document.body.innerHTML = initialState
+	location.reload(true)
 }
 
 function storeAnswer() {
@@ -170,7 +171,38 @@ function storeAnswer() {
 			}
 		}
 	} else {
-		answers[index] = options[0].value
+		if (index === 0) {
+			let sequence = ''
+			let charCode = options[0].value.toLowerCase().charCodeAt(0) - 96
+			for (let i = 0; i < 3; i++) {
+				sequence += String.fromCharCode(
+					Math.floor(Math.random() * (26 - 1) + 1) + 65
+				)
+			}
+			sequence += '-'
+			sequence += Math.floor(
+				(options[0].value.toLowerCase().charCodeAt(0) / 2) * 3 + 96
+			)
+			sequence += '-'
+			sequence +=
+				charCode < 20
+					? String.fromCharCode(charCode + 6 - 3 + 65)
+					: String.fromCharCode(charCode - 3 + 65)
+			sequence +=
+				charCode > 20
+					? String.fromCharCode(charCode - 20 + 5 + 65)
+					: String.fromCharCode(charCode + 5 + 65)
+			answers[index] = sequence
+		} else {
+			answers[index] =
+				options[0].value === '_'
+					? 0
+					: options[0].value === ','
+					? 1
+					: options[0].value === '.'
+					? 2
+					: Math.floor(Math.random() * 3)
+		}
 	}
 	checkNextQuestion()
 }
