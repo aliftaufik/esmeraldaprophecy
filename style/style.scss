@@ -1,4 +1,5 @@
 @import 'fonts';
+@import 'palette';
 
 * {
 	margin: 0;
@@ -7,13 +8,14 @@
 }
 
 html {
-	font-size: 18px;
+	font-size: 100%;
 	font-family: $main-font;
+	color: $accent-col;
 }
 
 body {
 	text-align: center;
-	background-color: rgb(42, 89, 133);
+	background-color: $bg-col;
 }
 
 main {
@@ -95,14 +97,38 @@ main {
 	}
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1170px) {
 	html {
 		font-size: 16px;
+	}
+
+	#title-area {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	html {
+		font-size: 14px;
+	}
+
+	#title-area {
+		h1 {
+			// font-size: 2.5rem;
+		}
 	}
 }
 
 @media only screen and (max-width: 920px) {
-	html {
-		font-size: 14px;
+	// html {
+	// 	font-size: 14px;
+	// }
+
+	#title-area {
+		h1 {
+			font-size: 2.5rem;
+		}
 	}
 }
