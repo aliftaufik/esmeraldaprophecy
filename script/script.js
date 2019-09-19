@@ -3,34 +3,37 @@ var questions = [
 	{
 		id: 2,
 		qst: 'How old were you when tsunami hit Aceh (2004)?',
-		opt: ['5-8', '8-10', '10-15', 'way younger', 'way older'],
+		opt: ['5-8', '8-10', '10-15', 'Way younger', 'Way older'],
 		ans: [
-			'Suffer of heartbroken on your adulthood',
-			'die young',
-			'get a very serous illness',
-			'have a debt you never be able to pay',
-			'never get a promotion'
+			"lose someone you love the most while you're still pretty young",
+			'die at age no more than 40',
+			'suffer from a very serious illness',
+			'lose all your money, fame, and family because of unpayable debt',
+			'never get a settled life, and you will live your whole life on the edge of poverty'
 		]
 	},
 	{
 		id: 3,
 		qst:
-			"Does your Instagram's username have non-alphabetic characters? write down any of it without space!",
+			"Does your Instagram's username have non-alphabetic characters? Write down any of it without space!",
 		ans: ['wait longer on', 'look deeply into', 'be persistent on']
 	},
 	{
 		id: 4,
 		qst: 'Do you prefer skipping breakfast or skipping dinner?',
 		opt: ['Skipping breakfast', 'Skipping dinner'],
-		ans: ['make yourself into difficult situation', 'procrastinate to any task']
+		ans: [
+			'make yourself into a difficult situation',
+			'procrastinate on any task'
+		]
 	},
 	{
 		id: 5,
 		qst: 'What is your usual shirt size?',
 		opt: ['XS', 'S', 'M', 'L', 'XL', 'XXXL'],
 		ans: [
-			'this tiny little goodness that you need to grow',
-			'this small faith on yourself that you must pierce deep',
+			'this tiny little kindness that you need to grow',
+			'this small faith in yourself that you must pierce deep',
 			'a bravery that',
 			'bla',
 			'b',
@@ -43,16 +46,16 @@ var questions = [
 		opt: [
 			'By private vehicle',
 			'By public transport',
-			'By foot',
-			'Paratrooping',
-			'Teleporting'
+			'On foot',
+			'By paratrooping',
+			'By teleporting'
 		],
 		ans: [
-			'you may be high but you will fall',
-			'you may be low but you will rise',
-			"you may be struggling but you'll find a way",
-			'you may be brave but you will die',
-			'you may have happiness now but rain comes after the sun'
+			'You may be high, but you will fall',
+			'You may be falling, but you will always rise again',
+			"You may be struggling, but you'll find the way",
+			"You may be brave, but don't let it drive you to your death",
+			'You may have happiness now, but rain always comes after the hot sun'
 		]
 	},
 	{
@@ -60,11 +63,11 @@ var questions = [
 		qst: 'Will you adopt a kitten/puppy? Will you adopt a son/daughter?',
 		opt: ['Yes', 'No', 'Yes and No', 'No and Yes', 'Half Yes half No'],
 		ans: [
-			'always share happiness to others',
-			'always be grateful of yourself',
-			'care to small things',
-			'have courage to take big responsibility',
-			'always have new way of thinking'
+			'always share happiness with others',
+			'will always be grateful of yourself',
+			'cares about small things',
+			'dares to take big responsibility',
+			'always has a new way of thinking'
 		]
 	}
 ]
@@ -138,11 +141,11 @@ function checkNextQuestion() {
 // questions[2].ans[answers[2]]
 function showResult() {
 	let result = document.getElementById('result')
-	result.innerHTML = `You are a person who like to ${
+	result.innerHTML = `You are a person who likes to ${
 		questions[2].ans[answers[2]]
-	}	someone. You often ${
+	}	someone/something. You often ${
 		questions[3].ans[answers[3]]
-	} but you always like to take the challenge. You are a person who ${
+	}, but you always like to take the challenge. You are a person who ${
 		questions[6].ans[answers[6]]
 	}. But remember, things aren't always going well. You will ${
 		questions[1].ans[answers[1]]
