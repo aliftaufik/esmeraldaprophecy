@@ -34,10 +34,10 @@ var questions = [
 		ans: [
 			'this tiny little kindness that you need to grow',
 			'this small faith in yourself that you must pierce deep',
-			'a bravery that',
-			'bla',
-			'b',
-			'l'
+			"a bravery that's getting stronger and stronger",
+			'good heart and good feeling',
+			'unstoppable power',
+			'this very good understanding of the feelings of others'
 		]
 	},
 	{
@@ -51,7 +51,7 @@ var questions = [
 			'By teleporting'
 		],
 		ans: [
-			'You may be high, but you will fall',
+			'You may stand high, but you will fall',
 			'You may be falling, but you will always rise again',
 			"You may be struggling, but you'll find the way",
 			"You may be brave, but don't let it drive you to your death",
@@ -151,15 +151,42 @@ function showResult() {
 		questions[1].ans[answers[1]]
 	}. Will you accept those fate? Or change it while you can? Remember that however you look into yourself, you always have ${
 		questions[4].ans[answers[4]]
-	} inside your soul. Always remember this: ${
+	} inside your soul. Always remember this: <strong>${
 		answers[0]
-	}. This sequence of numbers and letters will mean something to you one day and will save you from all bad things that may happen to you. so always keep it in mind. And take my last words of wisdom: ${
+	}</strong>. This sequence of numbers and letters will mean something to you one day and will save you from all bad things that may happen. so always keep it in mind. And take my last words of wisdom: ${
 		questions[5].ans[answers[5]]
-	}`
+	}.`
 }
 
 function restart() {
 	location.reload(true)
+}
+
+function checkAnswer() {
+	let options = document.getElementById('options').childNodes
+	if (options.length > 1) {
+		for (let i = 0; i < options.length; i++) {
+			let option = options[i].firstChild
+			if (option.checked) {
+				storeAnswer()
+				return
+			}
+		}
+		alert('Choose one of the options!')
+	} else {
+		let index = usedQuestions[usedQuestions.length - 1]
+		let regex
+		if (index === 0) {
+			regex = /^[a-zA-Z]$/
+		} else {
+			regex = /^[,.-_]+$/
+		}
+		if (regex.test(options[0].value)) {
+			storeAnswer()
+		} else {
+			alert('type the answer correctly!')
+		}
+	}
 }
 
 function storeAnswer() {
@@ -198,11 +225,11 @@ function storeAnswer() {
 			answers[index] = sequence
 		} else {
 			answers[index] =
-				options[0].value === '_'
+				options[0].value[0] === '_'
 					? 0
-					: options[0].value === ','
+					: options[0].value[0] === ','
 					? 1
-					: options[0].value === '.'
+					: options[0].value[0] === '.'
 					? 2
 					: Math.floor(Math.random() * 3)
 		}
