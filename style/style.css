@@ -10,7 +10,6 @@
 }
 
 html {
-  font-size: 100%;
   font-family: "Poppins", sans-serif;
   color: #99dfea;
 }
@@ -24,39 +23,42 @@ main {
   width: 60vw;
   height: 100vh;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 #title-area {
-  width: 55vw;
+  height: 25%;
   margin: 0 auto;
 }
 
 #title-area h1 {
   font-size: 3.5rem;
-  margin: 1rem 0 2rem;
 }
 
 #title-area p {
   font-weight: 500;
+  font-size: 1.3rem;
+}
+
+#title-area #creator {
+  margin-bottom: 3rem;
+}
+
+#title-area #creator a {
+  color: #99dfea;
+  text-decoration: none;
+}
+
+#title-area #creator a:hover {
+  color: #043662;
 }
 
 #title-area #donate {
   margin-top: 0.5rem;
   font-size: 0.7rem;
-  font-weight: 500;
 }
 
 #content-area {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  height: 75%;
 }
 
 #content-area section {
@@ -65,10 +67,19 @@ main {
 
 #content-area button {
   font-size: 1.3rem;
-  padding: 0.2em 1em;
-  background-color: red;
+  font-weight: 500;
+  width: 10em;
+  height: 2em;
+  background-color: #07c0ba;
+  color: #121326;
   border: none;
   cursor: pointer;
+}
+
+#content-area button:hover {
+  background-color: transparent;
+  border: 2px solid #07c0ba;
+  color: #07c0ba;
 }
 
 #content-area p {
@@ -80,59 +91,47 @@ main {
 }
 
 #start-area #start {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin-top: 50vh;
 }
 
 #question-area {
-  position: relative;
+  height: 100%;
 }
 
 #question-area p#question {
-  position: relative;
-  top: 4rem;
-  margin-bottom: 7rem;
+  font-size: 1.2em;
+  margin-bottom: 5rem;
 }
 
 #question-area button#next-question {
-  position: absolute;
-  bottom: 6rem;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  margin-top: 5rem;
 }
 
 #question-area #options div {
   margin: 0 auto;
   text-align: left;
   width: 30%;
+  min-width: 15em;
 }
 
 #question-area #options div input {
   margin-right: 2rem;
 }
 
-@media only screen and (max-width: 1170px) {
-  html {
-    font-size: 16px;
-  }
-  #title-area h1 {
-    font-size: 3rem;
-  }
+#question-area #options input[type='text'] {
+  width: 45%;
+  min-width: 13em;
+  height: 2em;
+  font-size: 1rem;
+  text-align: center;
 }
 
-@media only screen and (max-width: 1024px) {
-  html {
-    font-size: 14px;
-  }
+#result-area p#result {
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
-@media only screen and (max-width: 920px) {
-  #title-area h1 {
-    font-size: 2.5rem;
-  }
+#result-area button#restart {
+  margin-top: 5rem;
 }
 /*# sourceMappingURL=style.css.map */
