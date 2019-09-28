@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+/* Coolors Exported Palette - coolors.co/043561-121325-8f3985-98dfea-07beb8 */
+/* HSL */
+/* RGB */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: #99dfea;
+}
+
+body {
+  text-align: center;
+  background-color: #121326;
+}
+
+main {
+  width: 60vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#title-area {
+  height: 25%;
+  margin: 0 auto;
+}
+
+#title-area h1 {
+  font-size: 3.5rem;
+}
+
+#title-area p {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+#title-area #creator {
+  margin-bottom: 3rem;
+}
+
+#title-area #creator a {
+  color: #99dfea;
+  text-decoration: none;
+}
+
+#title-area #creator a:hover {
+  color: #043662;
+}
+
+#title-area #donate {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+
+#content-area {
+  height: 75%;
+}
+
+#content-area section {
+  height: 100%;
+}
+
+#content-area button {
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 10em;
+  height: 2em;
+  background-color: #07c0ba;
+  color: #121326;
+  border: none;
+  cursor: pointer;
+}
+
+#content-area button:hover {
+  background-color: transparent;
+  border: 2px solid #07c0ba;
+  color: #07c0ba;
+}
+
+#content-area p {
+  font-weight: 500;
+}
+
+#start-area {
+  position: relative;
+}
+
+#start-area #start {
+  margin-top: 50vh;
+}
+
+#question-area {
+  height: 100%;
+}
+
+#question-area p#question {
+  font-size: 1.2em;
+  margin-bottom: 5rem;
+}
+
+#question-area button#next-question {
+  margin-top: 5rem;
+}
+
+#question-area #options div {
+  margin: 0 auto;
+  text-align: left;
+  width: 30%;
+  min-width: 15em;
+}
+
+#question-area #options div input {
+  margin-right: 2rem;
+}
+
+#question-area #options input[type='text'] {
+  width: 45%;
+  min-width: 13em;
+  height: 2em;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#result-area p#result {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+#result-area button#restart {
+  margin-top: 5rem;
+}
+/*# sourceMappingURL=coba.css.map */

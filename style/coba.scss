@@ -1,0 +1,155 @@
+@import 'fonts';
+@import 'palette';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	// font-size: 100%;
+	font-family: $main-font;
+	color: $accent-col;
+}
+
+body {
+	text-align: center;
+	background-color: $bg-col;
+}
+
+main {
+	// border: 1px solid blue;
+	width: 60vw;
+	height: 100vh;
+	margin: 0 auto;
+	// display: flex;
+	// flex-direction: column;
+}
+
+#title-area {
+	// border: 1px solid green;
+	// width: 55vw;
+	height: 25%;
+	margin: 0 auto;
+	h1 {
+		font-size: 3.5rem;
+		// margin: 1rem 0 2rem;
+	}
+
+	p {
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+
+	#creator {
+		margin-bottom: 3rem;
+		a {
+			color: $accent-col;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $prime-col;
+		}
+	}
+
+	#donate {
+		margin-top: 0.5rem;
+		font-size: 0.7rem;
+		// font-weight: 500;
+	}
+}
+
+#content-area {
+	// border: 1px solid red;
+	height: 75%;
+	// flex-grow: 1;
+	section {
+		height: 100%;
+	}
+	button {
+		font-size: 1.3rem;
+		font-weight: 500;
+		// color: $prime-col;
+		width: 10em;
+		height: 2em;
+		// padding: 0.2em 1em;
+		background-color: $btn-col;
+		color: $bg-col;
+		border: none;
+		cursor: pointer;
+	}
+	button:hover {
+		background-color: transparent;
+		border: 2px solid $btn-col;
+		color: $btn-col;
+	}
+	p {
+		font-weight: 500;
+	}
+}
+
+#start-area {
+	position: relative;
+	#start {
+		// position: absolute;
+		// top: 40%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+		margin-top: 50vh;
+	}
+}
+
+#question-area {
+	// border: 1px solid white;
+	height: 100%;
+	// position: relative;
+	p#question {
+		// position: relative;
+		// top: 4rem;
+		font-size: 1.2em;
+		margin-bottom: 5rem;
+	}
+	button#next-question {
+		// position: absolute;
+		// bottom: 6rem;
+		// right: 50%;
+		// transform: translateX(50%);
+		margin-top: 5rem;
+	}
+	#options {
+		div {
+			// border: 1px solid red;
+			margin: 0 auto;
+			text-align: left;
+			width: 30%;
+			min-width: 15em;
+			input {
+				margin-right: 2rem;
+			}
+		}
+		input[type='text'] {
+			// display: block;
+			width: 45%;
+			min-width: 13em;
+			// margin-top: 30px;
+			height: 2em;
+			font-size: 1rem;
+			text-align: center;
+			// margin-left: auto;
+			// margin-right: auto;
+		}
+	}
+}
+
+#result-area {
+	// border: 1px solid red;
+	p#result {
+		font-size: 1.2em;
+		line-height: 1.5;
+	}
+	button#restart {
+		margin-top: 5rem;
+	}
+}

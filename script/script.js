@@ -147,11 +147,11 @@ function showResult() {
 		questions[3].ans[answers[3]]
 	}, but you always like to take the challenge. You are a person who ${
 		questions[6].ans[answers[6]]
-	}. But remember, things aren't always going well. You will ${
+	}. <br>But remember, things aren't always going well. You will ${
 		questions[1].ans[answers[1]]
 	}. Will you accept those fate? Or change it while you can? Remember that however you look into yourself, you always have ${
 		questions[4].ans[answers[4]]
-	} inside your soul. Always remember this: <strong>${
+	} inside your soul. <br>Always remember this: <strong>${
 		answers[0]
 	}</strong>. This sequence of numbers and letters will mean something to you one day and will save you from all bad things that may happen. so always keep it in mind. And take my last words of wisdom: ${
 		questions[5].ans[answers[5]]
@@ -179,7 +179,7 @@ function checkAnswer() {
 		if (index === 0) {
 			regex = /^[a-zA-Z]$/
 		} else {
-			regex = /^[,.-_]+$/
+			regex = /^[,._-]+$/
 		}
 		if (regex.test(options[0].value)) {
 			storeAnswer()
