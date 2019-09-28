@@ -184,7 +184,8 @@ function checkAnswer() {
 		if (regex.test(options[0].value)) {
 			storeAnswer()
 		} else {
-			alert('type the answer correctly!')
+			alert('Type the answer correctly!')
+			options[0].value = ''
 		}
 	}
 }
